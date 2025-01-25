@@ -1,3 +1,14 @@
-[gd_scene format=3 uid="uid://co2dw2l1gioye"]
+[gd_scene load_steps=3 format=3 uid="uid://co2dw2l1gioye"]
+
+[ext_resource type="PackedScene" uid="uid://ba1kdf06fbid0" path="res://player/scenes/player.tscn" id="1_abcdc"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_rm7ii"]
 
 [node name="PlayerMovementLevel" type="Node2D"]
+material = SubResource("CanvasItemMaterial_rm7ii")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(321, 158)
+
+[node name="Player" parent="." instance=ExtResource("1_abcdc")]
+position = Vector2(320, 224)

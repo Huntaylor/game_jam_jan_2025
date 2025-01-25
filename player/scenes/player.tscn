@@ -1,3 +1,194 @@
-[gd_scene format=3 uid="uid://ba1kdf06fbid0"]
+[gd_scene load_steps=11 format=3 uid="uid://ba1kdf06fbid0"]
+
+[ext_resource type="Texture2D" uid="uid://ce7wvksq7i8ia" path="res://player/assets/cannon.png" id="1_1hvxb"]
+[ext_resource type="Script" path="res://player/scripts/player.gd" id="1_iatih"]
+
+[sub_resource type="Gradient" id="Gradient_7nrik"]
+offsets = PackedFloat32Array(0.015873, 0.518519, 1)
+colors = PackedColorArray(0.47288, 0.48, 0.0528, 1, 0.58, 0.0638, 0.0638, 1, 0.77, 0.233182, 0.0847, 1)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_pgws0"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4uko0"]
+bg_color = Color(0.192157, 0.196078, 0.2, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+corner_detail = 20
+expand_margin_left = 1.0
+expand_margin_top = 1.0
+expand_margin_right = 1.0
+expand_margin_bottom = 1.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4a0v3"]
+bg_color = Color(0.537255, 0.552941, 0.560784, 1)
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="Theme" id="Theme_oge6a"]
+ProgressBar/styles/background = SubResource("StyleBoxFlat_4uko0")
+ProgressBar/styles/fill = SubResource("StyleBoxFlat_4a0v3")
+
+[sub_resource type="Animation" id="Animation_8l4f1"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MarginContainer:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MarginContainer/ProgressBar:value")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:isReloading")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_weetn"]
+resource_name = "reloading"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MarginContainer:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MarginContainer/ProgressBar:value")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 50.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:isReloading")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.5),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Marker2D/CPUParticles2D:emitting")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.5),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_vqdos"]
+_data = {
+"RESET": SubResource("Animation_8l4f1"),
+"reloading": SubResource("Animation_weetn")
+}
 
 [node name="Player" type="Node2D"]
+script = ExtResource("1_iatih")
+
+[node name="Marker2D" type="Marker2D" parent="."]
+position = Vector2(0, 5)
+rotation = -1.5708
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="Marker2D"]
+position = Vector2(11, 3.98199e-05)
+emitting = false
+amount = 11
+lifetime = 0.5
+explosiveness = 1.0
+lifetime_randomness = 0.9
+emission_shape = 1
+emission_sphere_radius = 1.79
+particle_flag_align_y = true
+gravity = Vector2(0, -50)
+initial_velocity_min = 50.0
+initial_velocity_max = 150.0
+radial_accel_max = 10.0
+tangential_accel_max = 10.0
+scale_amount_max = 8.0
+color_ramp = SubResource("Gradient_7nrik")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="Marker2D"]
+position = Vector2(5, -6.934e-06)
+rotation = 1.5708
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Marker2D/CharacterBody2D"]
+position = Vector2(0, 2)
+scale = Vector2(1.145, 1.145)
+shape = SubResource("CircleShape2D_pgws0")
+
+[node name="Sprite2D" type="Sprite2D" parent="Marker2D/CharacterBody2D"]
+texture_filter = 1
+position = Vector2(2.84217e-14, -4.76837e-07)
+texture = ExtResource("1_1hvxb")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -15.0
+offset_top = 20.0
+offset_right = 15.0
+offset_bottom = 24.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="ProgressBar" type="ProgressBar" parent="MarginContainer"]
+texture_filter = 1
+layout_mode = 2
+size_flags_vertical = 1
+theme = SubResource("Theme_oge6a")
+max_value = 50.0
+rounded = true
+show_percentage = false
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_vqdos")
+}
