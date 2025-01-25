@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://3we83v40fqug"]
+
+[ext_resource type="Script" path="res://enemies/scripts/boss.gd" id="1_3b7qd"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_sw7y5"]
+radius = 72.2496
+
+[node name="Boss" type="CharacterBody2D"]
+collision_mask = 2
+script = ExtResource("1_3b7qd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_sw7y5")

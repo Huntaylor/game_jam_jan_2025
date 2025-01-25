@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://1u4fp4sqsebr"]
+
+[ext_resource type="PackedScene" uid="uid://topgxuilp6qq" path="res://enemies/scenes/enemy_handler.tscn" id="1_58101"]
+[ext_resource type="PackedScene" uid="uid://bcs03rbqbtfro" path="res://enemies/scenes/spawner.tscn" id="2_q34ih"]
+[ext_resource type="PackedScene" uid="uid://buvpmhwfmomhp" path="res://enemies/scenes/kill_zone.tscn" id="3_g70tx"]
+[ext_resource type="PackedScene" uid="uid://dnyjd2t5hw41u" path="res://enemies/scenes/border.tscn" id="4_ln4qa"]
+
+[node name="EnemyMovementLevel" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="EnemyHandler" parent="." instance=ExtResource("1_58101")]
+position = Vector2(128, 8)
+
+[node name="spawner" parent="." instance=ExtResource("2_q34ih")]
+position = Vector2(208, 32)
+
+[node name="kill_zone" parent="." instance=ExtResource("3_g70tx")]
+position = Vector2(128, 648)
+
+[node name="border" parent="." instance=ExtResource("4_ln4qa")]
+position = Vector2(0, 272)
+rotation = 1.5708

@@ -1,3 +1,17 @@
-[gd_scene format=3 uid="uid://bgsmr4k8llu2m"]
+[gd_scene load_steps=3 format=3 uid="uid://bgsmr4k8llu2m"]
 
-[node name="Enemy" type="Node2D"]
+[ext_resource type="Script" path="res://enemies/scripts/enemy.gd" id="1_qcpas"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_fhc3s"]
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+collision_mask = 2
+script = ExtResource("1_qcpas")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_fhc3s")
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
