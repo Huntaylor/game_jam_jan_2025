@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://1u4fp4sqsebr"]
+[gd_scene load_steps=6 format=3 uid="uid://1u4fp4sqsebr"]
 
 [ext_resource type="PackedScene" uid="uid://topgxuilp6qq" path="res://enemies/scenes/enemy_handler.tscn" id="1_58101"]
 [ext_resource type="PackedScene" uid="uid://bcs03rbqbtfro" path="res://enemies/scenes/spawner.tscn" id="2_q34ih"]
 [ext_resource type="PackedScene" uid="uid://buvpmhwfmomhp" path="res://enemies/scenes/kill_zone.tscn" id="3_g70tx"]
 [ext_resource type="PackedScene" uid="uid://dnyjd2t5hw41u" path="res://enemies/scenes/border.tscn" id="4_ln4qa"]
+[ext_resource type="PackedScene" uid="uid://ba1kdf06fbid0" path="res://player/scenes/player.tscn" id="5_wyfn6"]
 
 [node name="EnemyMovementLevel" type="Node2D"]
 
@@ -13,10 +14,10 @@
 position = Vector2(576, 0)
 
 [node name="spawner" parent="." instance=ExtResource("2_q34ih")]
-position = Vector2(576, 0)
+position = Vector2(288, 0)
 
 [node name="kill_zone" parent="." instance=ExtResource("3_g70tx")]
-position = Vector2(576, 648)
+position = Vector2(272, 320)
 
 [node name="border" parent="." instance=ExtResource("4_ln4qa")]
 position = Vector2(0, 192)
@@ -25,7 +26,10 @@ collision_layer = 3
 collision_mask = 3
 
 [node name="border" parent="border" instance=ExtResource("4_ln4qa")]
-position = Vector2(-4.57764e-05, -1152)
+position = Vector2(-8.00231, -640)
 rotation = 3.14159
 collision_layer = 3
 collision_mask = 3
+
+[node name="Player" parent="." instance=ExtResource("5_wyfn6")]
+position = Vector2(280, 304)

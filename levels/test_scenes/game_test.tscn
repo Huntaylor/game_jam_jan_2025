@@ -1,0 +1,33 @@
+[gd_scene load_steps=7 format=3 uid="uid://cwk847ue0fal0"]
+
+[ext_resource type="PackedScene" uid="uid://ba1kdf06fbid0" path="res://player/scenes/player.tscn" id="1_xik8e"]
+[ext_resource type="PackedScene" uid="uid://dnyjd2t5hw41u" path="res://enemies/scenes/border.tscn" id="2_1h1wc"]
+[ext_resource type="PackedScene" uid="uid://buvpmhwfmomhp" path="res://enemies/scenes/kill_zone.tscn" id="3_alif1"]
+[ext_resource type="PackedScene" uid="uid://bcs03rbqbtfro" path="res://enemies/scenes/spawner.tscn" id="4_nl3tw"]
+[ext_resource type="PackedScene" uid="uid://topgxuilp6qq" path="res://enemies/scenes/enemy_handler.tscn" id="5_6wkyx"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_rm7ii"]
+
+[node name="PlayerMovementLevel" type="Node2D"]
+material = SubResource("CanvasItemMaterial_rm7ii")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(320, 160)
+
+[node name="Player" parent="." instance=ExtResource("1_xik8e")]
+position = Vector2(320, 264)
+
+[node name="border" parent="." instance=ExtResource("2_1h1wc")]
+position = Vector2(-8, 168)
+rotation = 1.5708
+
+[node name="kill_zone" parent="." instance=ExtResource("3_alif1")]
+position = Vector2(320, 320)
+
+[node name="border2" parent="." instance=ExtResource("2_1h1wc")]
+position = Vector2(648, 168)
+rotation = 4.71239
+
+[node name="spawner" parent="." instance=ExtResource("4_nl3tw")]
+
+[node name="EnemyHandler" parent="." instance=ExtResource("5_6wkyx")]

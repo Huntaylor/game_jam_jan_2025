@@ -7,8 +7,8 @@
 radius = 4.0
 
 [node name="StaticBody2D" type="Area2D"]
-collision_layer = 2
-collision_mask = 2
+collision_layer = 3
+collision_mask = 3
 script = ExtResource("1_7bqfm")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -16,3 +16,5 @@ shape = SubResource("CircleShape2D_15xcq")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_bnxi0")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -6,7 +6,7 @@ var boss = 0
 
 func _on_timer_timeout() -> void:
 	var ene = enemy.instantiate()
-	ene.position = Vector2(randf_range(0, 250), 0)
+	ene.position = Vector2(randf_range(5, 635), 0)
 	get_parent().get_node("EnemyHandler").add_child(ene)
 	
 	boss += 1
