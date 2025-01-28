@@ -1,0 +1,79 @@
+[gd_scene load_steps=4 format=3 uid="uid://c30ns4yfml0qw"]
+
+[ext_resource type="Theme" uid="uid://be8rykcscgesr" path="res://ui/assets/pixel_theme.tres" id="1_fm7im"]
+[ext_resource type="Script" path="res://ui/main_menu.gd" id="2_5odju"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gkwi3"]
+bg_color = Color(0.21, 0.21, 0.21, 1)
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_fm7im")
+script = ExtResource("2_5odju")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_gkwi3")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -134.0
+offset_top = -52.0
+offset_right = 134.0
+offset_bottom = 52.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 12
+
+[node name="start_button" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Start Game"
+
+[node name="options_button" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Options
+"
+
+[node name="exit_button" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Exit
+"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -194.0
+offset_top = 34.0
+offset_right = 194.0
+offset_bottom = 66.0
+grow_horizontal = 2
+text = "I am the Weapon"
+
+[node name="ConfirmationDialog" type="ConfirmationDialog" parent="."]
+title = "Quit?"
+initial_position = 4
+size = Vector2i(264, 100)
+content_scale_stretch = 1
+
+[connection signal="pressed" from="VBoxContainer/start_button" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/options_button" to="." method="_on_options_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/exit_button" to="." method="_on_exit_button_pressed"]
+[connection signal="canceled" from="ConfirmationDialog" to="." method="_on_confirmation_dialog_canceled"]
+[connection signal="confirmed" from="ConfirmationDialog" to="." method="_on_confirmation_dialog_confirmed"]

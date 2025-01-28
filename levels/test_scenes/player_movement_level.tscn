@@ -8,7 +8,7 @@
 material = SubResource("CanvasItemMaterial_rm7ii")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(321, 158)
+position = Vector2(320, 160)
 
 [node name="Player" parent="." instance=ExtResource("1_abcdc")]
 position = Vector2(320, 224)
