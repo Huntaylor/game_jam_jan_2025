@@ -19,7 +19,7 @@ func _input(event: InputEvent) -> void:
 	if event is InputEventMouseMotion:
 		var camera = get_viewport().get_camera_2d()
 		marker_2d.rotate(marker_2d.get_angle_to(camera.get_global_mouse_position()))
-	elif event is InputEventMouseButton and event.is_pressed():
+	elif Input.is_action_just_pressed("Cannon Fire") and event.is_pressed():
 		if !isReloading:
 			isReloading = true
 			animation_player.play('reloading')

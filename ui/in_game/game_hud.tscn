@@ -1,0 +1,35 @@
+[gd_scene load_steps=4 format=3 uid="uid://dipnfgmni2akd"]
+
+[ext_resource type="Theme" uid="uid://be8rykcscgesr" path="res://ui/assets/pixel_theme.tres" id="1_hat44"]
+[ext_resource type="Texture2D" uid="uid://b2l0vwqipx2sa" path="res://ui/assets/pause_button.png" id="2_udlm0"]
+[ext_resource type="Theme" uid="uid://d0uedv3h1m5jc" path="res://ui/assets/kenneyUI.tres" id="3_hswgd"]
+
+[node name="GameHud" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+theme = ExtResource("1_hat44")
+icon = ExtResource("2_udlm0")
+
+[node name="Label" type="Label" parent="."]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -135.0
+offset_bottom = 56.0
+grow_horizontal = 0
+theme = ExtResource("3_hswgd")
+theme_override_font_sizes/font_size = 40
+text = "Score"

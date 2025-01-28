@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="game_jam_01_25"
-run/main_scene="res://levels/test_scenes/game_test.tscn"
+run/main_scene="res://ui/main_menu.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
 config/icon="res://icon.svg"
 
@@ -23,7 +23,7 @@ window/size/mode=2
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 window/stretch/scale_mode="integer"
-mouse_cursor/custom_image="res://ui/curser_larger_1.png"
+mouse_cursor/custom_image="res://ui/assets/curser_larger_1.png"
 mouse_cursor/custom_image_hotspot=Vector2(32, 32)
 mouse_cursor/tooltip_position_offset=Vector2(0, 0)
 
@@ -31,6 +31,14 @@ mouse_cursor/tooltip_position_offset=Vector2(0, 0)
 
 version_control/plugin_name="GitPlugin"
 version_control/autoload_on_startup=true
+
+[input]
+
+"Cannon Fire"={
+"deadzone": 0.5,
+"events": [Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":1,"position":Vector2(69, 10),"global_position":Vector2(78, 56),"factor":1.0,"button_index":1,"canceled":false,"pressed":true,"double_click":false,"script":null)
+]
+}
 
 [physics]
 
