@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://ksijtg4vq5th"
+path="res://.godot/imported/interference.wav-6f993fec2a0c3b82d7c172200d046ea4.sample"
+
+[deps]
+
+source_file="res://ui/assets/sfx/unused/Retro Sounds/audio effects retro/Machines/interference.wav"
+dest_files=["res://.godot/imported/interference.wav-6f993fec2a0c3b82d7c172200d046ea4.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

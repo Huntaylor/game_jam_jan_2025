@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bnf8k8aqpvf3o"
+path="res://.godot/imported/tense atmosphere 3.wav-620c878ced0a342cf96c812d8a705607.sample"
+
+[deps]
+
+source_file="res://ui/assets/sfx/unused/Retro Sounds/audio effects retro/atmosphere/tense atmosphere 3.wav"
+dest_files=["res://.godot/imported/tense atmosphere 3.wav-620c878ced0a342cf96c812d8a705607.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

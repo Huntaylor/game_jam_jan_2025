@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://di5lq06v3xs5m"
+path="res://.godot/imported/animal timid.wav-ce1bbcbe889e1c93f4393fefafc4870a.sample"
+
+[deps]
+
+source_file="res://ui/assets/sfx/unused/Retro Sounds/audio effects retro/Animal and caracters/animal/animal timid.wav"
+dest_files=["res://.godot/imported/animal timid.wav-ce1bbcbe889e1c93f4393fefafc4870a.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

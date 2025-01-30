@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cvbvhule8uvhy"
+path="res://.godot/imported/walk 1 fast.wav-2619d2727965a04e533409695de49c53.sample"
+
+[deps]
+
+source_file="res://ui/assets/sfx/unused/Retro Sounds/audio effects retro/Animal and caracters/characters/walk/walk 1 fast.wav"
+dest_files=["res://.godot/imported/walk 1 fast.wav-2619d2727965a04e533409695de49c53.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

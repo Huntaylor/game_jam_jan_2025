@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://beh6314rtog3f"
+path="res://.godot/imported/bird 5.wav-e1f35c0cee4654efb354eb0d2d2e445d.sample"
+
+[deps]
+
+source_file="res://ui/assets/sfx/unused/Retro Sounds/audio effects retro/Animal and caracters/animal/bird 5.wav"
+dest_files=["res://.godot/imported/bird 5.wav-e1f35c0cee4654efb354eb0d2d2e445d.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

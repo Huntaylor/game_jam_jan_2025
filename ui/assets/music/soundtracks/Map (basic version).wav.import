@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dqlymptixp1or"
+path="res://.godot/imported/Map (basic version).wav-afecf60b23aa3d7f09cc47bd6dccc957.sample"
+
+[deps]
+
+source_file="res://ui/assets/music/soundtracks/Map (basic version).wav"
+dest_files=["res://.godot/imported/Map (basic version).wav-afecf60b23aa3d7f09cc47bd6dccc957.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

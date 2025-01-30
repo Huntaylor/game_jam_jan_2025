@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bamslxhvhrxd1"
+path="res://.godot/imported/Atmosphere industrial.wav-6678c63bc4162a926c8437c7a92dacbb.sample"
+
+[deps]
+
+source_file="res://ui/assets/sfx/unused/Retro Sounds/audio effects retro/atmosphere/Atmosphere industrial.wav"
+dest_files=["res://.godot/imported/Atmosphere industrial.wav-6678c63bc4162a926c8437c7a92dacbb.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

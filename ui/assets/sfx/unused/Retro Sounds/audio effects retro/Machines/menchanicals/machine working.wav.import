@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://birqxere5aj5n"
+path="res://.godot/imported/machine working.wav-13afa194000750fe00db6a53106a8af6.sample"
+
+[deps]
+
+source_file="res://ui/assets/sfx/unused/Retro Sounds/audio effects retro/Machines/menchanicals/machine working.wav"
+dest_files=["res://.godot/imported/machine working.wav-13afa194000750fe00db6a53106a8af6.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

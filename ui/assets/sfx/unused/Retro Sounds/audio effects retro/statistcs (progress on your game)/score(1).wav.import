@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://xbcqat3gekl5"
+path="res://.godot/imported/score(1).wav-72d2db9db0950e891b54b6f1500620ab.sample"
+
+[deps]
+
+source_file="res://ui/assets/sfx/unused/Retro Sounds/audio effects retro/statistcs (progress on your game)/score(1).wav"
+dest_files=["res://.godot/imported/score(1).wav-72d2db9db0950e891b54b6f1500620ab.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

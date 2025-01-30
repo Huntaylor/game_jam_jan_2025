@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://0wkntpitjd71"
+path="res://.godot/imported/animal friendly.wav-df46e686e6593c6af9cfd6a6023a4355.sample"
+
+[deps]
+
+source_file="res://ui/assets/sfx/unused/Retro Sounds/audio effects retro/Animal and caracters/animal/animal friendly.wav"
+dest_files=["res://.godot/imported/animal friendly.wav-df46e686e6593c6af9cfd6a6023a4355.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

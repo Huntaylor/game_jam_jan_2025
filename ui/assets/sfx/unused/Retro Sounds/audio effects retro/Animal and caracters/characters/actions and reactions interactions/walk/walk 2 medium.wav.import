@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://ci7tjt8uj6tnq"
+path="res://.godot/imported/walk 2 medium.wav-efab54faf9aa42323d0da8edd0ec9e7e.sample"
+
+[deps]
+
+source_file="res://ui/assets/sfx/unused/Retro Sounds/audio effects retro/Animal and caracters/characters/actions and reactions interactions/walk/walk 2 medium.wav"
+dest_files=["res://.godot/imported/walk 2 medium.wav-efab54faf9aa42323d0da8edd0ec9e7e.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

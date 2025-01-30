@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cmu5y7j86a04e"
+path="res://.godot/imported/happy bird.wav-312c9417c98190f17e7f64d3fe9021c9.sample"
+
+[deps]
+
+source_file="res://ui/assets/sfx/unused/Retro Sounds/audio effects retro/Animal and caracters/animal/happy bird.wav"
+dest_files=["res://.godot/imported/happy bird.wav-312c9417c98190f17e7f64d3fe9021c9.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dgytnv4xirgym"
+path="res://.godot/imported/bassline 1.wav-c700fd592385cfea08c16b5a4212be0c.sample"
+
+[deps]
+
+source_file="res://ui/assets/sfx/unused/Retro Sounds/audio effects retro/Extras/can use for music/bassline 1.wav"
+dest_files=["res://.godot/imported/bassline 1.wav-c700fd592385cfea08c16b5a4212be0c.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

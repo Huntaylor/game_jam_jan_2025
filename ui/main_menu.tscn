@@ -1,10 +1,13 @@
-[gd_scene load_steps=4 format=3 uid="uid://c30ns4yfml0qw"]
+[gd_scene load_steps=7 format=3 uid="uid://c30ns4yfml0qw"]
 
 [ext_resource type="Theme" uid="uid://be8rykcscgesr" path="res://ui/assets/pixel_theme.tres" id="1_fm7im"]
 [ext_resource type="Script" path="res://ui/main_menu.gd" id="2_5odju"]
+[ext_resource type="Script" path="res://ui/volume_state.gd" id="3_41kb1"]
+[ext_resource type="AudioStream" uid="uid://cu1uvk2h4gnj0" path="res://ui/assets/music/soundtracks/Mars.wav" id="4_y6j73"]
+[ext_resource type="AudioStream" uid="uid://dte7ghjhotbln" path="res://ui/assets/sfx/select_sound.wav" id="5_f871n"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gkwi3"]
-bg_color = Color(0.21, 0.21, 0.21, 1)
+bg_color = Color(0.156863, 0.164706, 0.227451, 1)
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -32,25 +35,37 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -134.0
-offset_top = -52.0
-offset_right = 134.0
-offset_bottom = 52.0
+offset_left = -80.0
+offset_top = -45.0
+offset_right = 80.0
+offset_bottom = 45.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 12
 
 [node name="start_button" type="Button" parent="VBoxContainer"]
 layout_mode = 2
-text = "Start Game"
-
-[node name="options_button" type="Button" parent="VBoxContainer"]
-layout_mode = 2
-text = "Options
+size_flags_horizontal = 4
+text = "Start
 "
+
+[node name="music_button" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Music 100%"
+script = ExtResource("3_41kb1")
+bus_name = "Music"
+
+[node name="sfx_button" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "SFX 100%"
+script = ExtResource("3_41kb1")
+bus_name = "SFX"
 
 [node name="exit_button" type="Button" parent="VBoxContainer"]
 layout_mode = 2
+size_flags_horizontal = 4
 text = "Exit
 "
 
@@ -70,10 +85,26 @@ text = "I am the Weapon"
 title = "Quit?"
 initial_position = 4
 size = Vector2i(264, 100)
+visible = true
 content_scale_stretch = 1
 
+[node name="Music" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_y6j73")
+autoplay = true
+bus = &"Music"
+playback_type = 1
+
+[node name="SFX" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_f871n")
+volume_db = 6.0
+bus = &"SFX"
+
 [connection signal="pressed" from="VBoxContainer/start_button" to="." method="_on_start_button_pressed"]
-[connection signal="pressed" from="VBoxContainer/options_button" to="." method="_on_options_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/music_button" to="." method="_on_music_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/music_button" to="VBoxContainer/music_button" method="_on_pressed"]
+[connection signal="pressed" from="VBoxContainer/sfx_button" to="." method="_on_sfx_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/sfx_button" to="VBoxContainer/sfx_button" method="_on_pressed"]
 [connection signal="pressed" from="VBoxContainer/exit_button" to="." method="_on_exit_button_pressed"]
 [connection signal="canceled" from="ConfirmationDialog" to="." method="_on_confirmation_dialog_canceled"]
 [connection signal="confirmed" from="ConfirmationDialog" to="." method="_on_confirmation_dialog_confirmed"]
+[connection signal="finished" from="Music" to="." method="_on_music_finished"]

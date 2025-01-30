@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://ch5hgu72m7owi"
+path="res://.godot/imported/cool pigeon.wav-b0b8af4d30023e35c874fe4a2a85626a.sample"
+
+[deps]
+
+source_file="res://ui/assets/sfx/unused/Retro Sounds/audio effects retro/Extras/idk/cool pigeon.wav"
+dest_files=["res://.godot/imported/cool pigeon.wav-b0b8af4d30023e35c874fe4a2a85626a.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://fe3uywp1j82j"
+path="res://.godot/imported/dive.wav-1d32968ea6cdaa2ca3aa63edf7c4a430.sample"
+
+[deps]
+
+source_file="res://ui/assets/sfx/unused/Retro Sounds/audio effects retro/atmosphere/dive.wav"
+dest_files=["res://.godot/imported/dive.wav-1d32968ea6cdaa2ca3aa63edf7c4a430.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
