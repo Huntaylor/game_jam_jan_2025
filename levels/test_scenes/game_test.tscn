@@ -1,5 +1,6 @@
-[gd_scene load_steps=7 format=3 uid="uid://cwk847ue0fal0"]
+[gd_scene load_steps=8 format=3 uid="uid://cwk847ue0fal0"]
 
+[ext_resource type="PackedScene" uid="uid://dem5fit03sb7d" path="res://ui/in_game/score_HUD.tscn" id="1_q5se2"]
 [ext_resource type="PackedScene" uid="uid://ba1kdf06fbid0" path="res://player/scenes/player.tscn" id="1_xik8e"]
 [ext_resource type="PackedScene" uid="uid://dnyjd2t5hw41u" path="res://enemies/scenes/border.tscn" id="2_1h1wc"]
 [ext_resource type="PackedScene" uid="uid://buvpmhwfmomhp" path="res://enemies/scenes/kill_zone.tscn" id="3_alif1"]
@@ -13,6 +14,9 @@ material = SubResource("CanvasItemMaterial_rm7ii")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(320, 160)
+
+[node name="Counter" parent="Camera2D" instance=ExtResource("1_q5se2")]
+visible = true
 
 [node name="Player" parent="." instance=ExtResource("1_xik8e")]
 position = Vector2(320, 264)
