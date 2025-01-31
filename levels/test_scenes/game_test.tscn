@@ -1,9 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://cwk847ue0fal0"]
+[gd_scene load_steps=8 format=3 uid="uid://cwk847ue0fal0"]
 
-[ext_resource type="PackedScene" uid="uid://dem5fit03sb7d" path="res://ui/in_game/score_HUD.tscn" id="1_q5se2"]
+[ext_resource type="PackedScene" uid="uid://ba7y0pi2al60m" path="res://ui/in_game/hud.tscn" id="1_fcclw"]
 [ext_resource type="PackedScene" uid="uid://ba1kdf06fbid0" path="res://player/scenes/player.tscn" id="1_xik8e"]
 [ext_resource type="PackedScene" uid="uid://dnyjd2t5hw41u" path="res://enemies/scenes/border.tscn" id="2_1h1wc"]
-[ext_resource type="PackedScene" uid="uid://b82qxsf3822hs" path="res://ui/in_game/health.tscn" id="2_wlhsm"]
 [ext_resource type="PackedScene" uid="uid://buvpmhwfmomhp" path="res://enemies/scenes/kill_zone.tscn" id="3_alif1"]
 [ext_resource type="PackedScene" uid="uid://bcs03rbqbtfro" path="res://enemies/scenes/spawner.tscn" id="4_nl3tw"]
 [ext_resource type="PackedScene" uid="uid://topgxuilp6qq" path="res://enemies/scenes/enemy_handler.tscn" id="5_6wkyx"]
@@ -16,18 +15,12 @@ material = SubResource("CanvasItemMaterial_rm7ii")
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(320, 160)
 
-[node name="Counter" parent="Camera2D" instance=ExtResource("1_q5se2")]
-visible = true
-offset_left = 128.0
+[node name="HUD" parent="Camera2D" instance=ExtResource("1_fcclw")]
+z_index = 1
+offset_left = -320.0
 offset_top = -160.0
-offset_right = 168.0
-offset_bottom = -137.0
-
-[node name="Health" parent="Camera2D" instance=ExtResource("2_wlhsm")]
-offset_left = 128.0
-offset_top = -136.0
-offset_right = 168.0
-offset_bottom = -113.0
+offset_right = -280.0
+offset_bottom = -120.0
 
 [node name="Player" parent="." instance=ExtResource("1_xik8e")]
 position = Vector2(320, 264)

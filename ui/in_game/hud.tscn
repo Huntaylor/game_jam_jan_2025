@@ -1,0 +1,90 @@
+[gd_scene load_steps=3 format=3 uid="uid://ba7y0pi2al60m"]
+
+[ext_resource type="Script" path="res://ui/hud.gd" id="1_nxwfe"]
+[ext_resource type="Theme" uid="uid://be8rykcscgesr" path="res://ui/assets/pixel_theme.tres" id="1_q86n5"]
+
+[node name="HUD" type="Control" groups=["in_game_HUD"]]
+process_mode = 2
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme = ExtResource("1_q86n5")
+script = ExtResource("1_nxwfe")
+
+[node name="Health" type="Label" parent="."]
+layout_mode = 0
+offset_top = 264.0
+offset_right = 112.0
+offset_bottom = 296.0
+theme_override_font_sizes/font_size = 13
+text = "life:"
+
+[node name="Score" type="Label" parent="."]
+layout_mode = 0
+offset_top = 288.0
+offset_right = 160.0
+offset_bottom = 320.0
+theme_override_font_sizes/font_size = 13
+text = "score:"
+
+[node name="Pause" type="Button" parent="."]
+process_mode = 3
+layout_mode = 0
+offset_left = 8.0
+offset_right = 33.0
+offset_bottom = 27.0
+theme = ExtResource("1_q86n5")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+toggle_mode = true
+action_mode = 0
+text = "II"
+icon_alignment = 1
+
+[node name="V_game_over" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 192.0
+offset_right = 448.0
+offset_bottom = 258.0
+theme_override_constants/separation = 50
+
+[node name="Game_Over" type="Label" parent="V_game_over"]
+layout_mode = 2
+text = "GAME OVER"
+
+[node name="Number" type="Label" parent="V_game_over"]
+layout_mode = 2
+text = "Score: 00"
+
+[node name="V_pause" type="VBoxContainer" parent="."]
+layout_mode = 2
+offset_left = 192.0
+offset_top = 112.0
+offset_right = 448.0
+offset_bottom = 248.0
+size_flags_vertical = 8
+theme_override_constants/separation = 30
+
+[node name="Paused" type="Label" parent="V_pause"]
+layout_mode = 2
+text = "Paused"
+horizontal_alignment = 1
+
+[node name="Play" type="Button" parent="V_pause"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 10
+text = "Continue"
+
+[node name="Exit" type="Button" parent="V_pause"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 10
+text = "Exit"
+
+[connection signal="pressed" from="Pause" to="." method="_on_pause_pressed"]
+[connection signal="toggled" from="Pause" to="." method="_on_pause_toggled"]
+[connection signal="pressed" from="V_pause/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="V_pause/Exit" to="." method="_on_exit_pressed"]
