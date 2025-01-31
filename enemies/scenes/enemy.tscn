@@ -13,7 +13,6 @@ script = ExtResource("1_qcpas")
 shape = SubResource("CircleShape2D_fhc3s")
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 5.0
 autostart = true
 
 [node name="Alien" type="Sprite2D" parent="."]

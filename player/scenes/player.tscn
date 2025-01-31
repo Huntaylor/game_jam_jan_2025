@@ -1,7 +1,9 @@
-[gd_scene load_steps=11 format=3 uid="uid://ba1kdf06fbid0"]
+[gd_scene load_steps=13 format=3 uid="uid://ba1kdf06fbid0"]
 
 [ext_resource type="Texture2D" uid="uid://ce7wvksq7i8ia" path="res://player/assets/cannon.png" id="1_1hvxb"]
 [ext_resource type="Script" path="res://player/scripts/player.gd" id="1_iatih"]
+[ext_resource type="AudioStream" uid="uid://ki8uyvnxpyj0" path="res://player/assets/sfx/explosion.wav" id="3_kdbxt"]
+[ext_resource type="PackedScene" uid="uid://dtmvlj0aun72f" path="res://player/npc/npc.tscn" id="3_mqua2"]
 
 [sub_resource type="Gradient" id="Gradient_7nrik"]
 offsets = PackedFloat32Array(0.015873, 0.518519, 1)
@@ -128,6 +130,7 @@ _data = {
 }
 
 [node name="Player" type="Node2D"]
+z_index = 1
 script = ExtResource("1_iatih")
 
 [node name="Marker2D" type="Marker2D" parent="."]
@@ -161,10 +164,13 @@ position = Vector2(0, 2)
 scale = Vector2(1.145, 1.145)
 shape = SubResource("CircleShape2D_pgws0")
 
-[node name="Sprite2D" type="Sprite2D" parent="Marker2D/CharacterBody2D"]
+[node name="Cannon" type="Sprite2D" parent="Marker2D/CharacterBody2D"]
 texture_filter = 1
 position = Vector2(2.84217e-14, -4.76837e-07)
 texture = ExtResource("1_1hvxb")
+
+[node name="NPC" parent="Marker2D/CharacterBody2D" instance=ExtResource("3_mqua2")]
+position = Vector2(2.5034e-05, 14)
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 anchors_preset = 7
@@ -192,3 +198,8 @@ show_percentage = false
 libraries = {
 "": SubResource("AnimationLibrary_vqdos")
 }
+
+[node name="Boom" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_kdbxt")
+volume_db = -5.0
+bus = &"SFX"

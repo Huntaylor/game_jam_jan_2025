@@ -74,7 +74,6 @@ func on_settings_changed(button: SettingsButton) -> void:
 	newVolume = button.state
 	if button.bus_name == "SFX" and button.state == button.VolumeState.ON :
 		newVolume = 6
-	print(newVolume)
 	
 	AudioServer.set_bus_volume_db(button.bus_index, newVolume)
 

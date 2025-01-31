@@ -1,0 +1,30 @@
+[gd_scene load_steps=3 format=3 uid="uid://dtmvlj0aun72f"]
+
+[ext_resource type="Texture2D" uid="uid://cabw2dosmy3ys" path="res://player/npc/assets/npc_ready.png" id="1_3xj0b"]
+[ext_resource type="Script" path="res://player/npc/npc.gd" id="2_4cxtc"]
+
+[node name="NPC" type="Sprite2D" groups=["NPC"]]
+position = Vector2(316, 295)
+texture = ExtResource("1_3xj0b")
+script = ExtResource("2_4cxtc")
+
+[node name="TimedBravery" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+
+[node name="ShakingTimer" type="Timer" parent="."]
+wait_time = 0.07
+
+[node name="RunTimer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+
+[node name="Deletion" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+
+[connection signal="timeout" from="TimedBravery" to="." method="_on_timed_bravery_timeout"]
+[connection signal="timeout" from="TimedBravery" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="ShakingTimer" to="." method="_on_shaking_timer_timeout"]
+[connection signal="timeout" from="RunTimer" to="." method="_on_run_timer_timeout"]
+[connection signal="timeout" from="Deletion" to="." method="_on_deletion_timeout"]
