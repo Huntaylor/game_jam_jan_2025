@@ -79,7 +79,7 @@ offset_top = 34.0
 offset_right = 194.0
 offset_bottom = 66.0
 grow_horizontal = 2
-text = "I am the Weapon"
+text = "Living Shellshocker"
 
 [node name="ConfirmationDialog" type="ConfirmationDialog" parent="."]
 title = "Quit?"

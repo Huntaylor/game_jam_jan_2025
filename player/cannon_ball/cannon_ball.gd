@@ -15,7 +15,6 @@ func _on_body_entered(body: Node2D) -> void:
 	var main : HUD = get_tree().get_first_node_in_group("in_game_HUD")
 	
 	if body is Enemy:
-		print("enemy hit")
 		body.queue_free()
 		main._on_enemy_hit()
 	if body is Boss:

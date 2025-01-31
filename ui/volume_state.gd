@@ -1,12 +1,12 @@
 extends Button
 class_name SettingsButton
 
-enum VolumeState {ON=0, HALF=-10, OFF = -100}
+enum VolumeState {ON = 0, HALF = -10, OFF = -100}
 
 @export var state: VolumeState
-@export_enum("Master", "Music", "SFX") var bus_name : String
+@export_enum("Master", "Music", "SFX") var bus_name: String
 
-var bus_index : int = 0
+var bus_index: int = 0
 
 func _ready() -> void:
 	get_bus_name_by_index()
@@ -16,9 +16,9 @@ func _ready() -> void:
 func _on_pressed() -> void:
 	set_display_text()
 
-func set_display_text()->void:
-	var volume : float
-
+func set_display_text() -> void:
+	var volume: float
+	
 	match state:
 		VolumeState.ON:
 			volume = 100
@@ -29,15 +29,14 @@ func set_display_text()->void:
 	print(volume)
 	var percent = ' ' + str(volume) + '%'
 	self.text = str(bus_name) + percent
-	print(text)
-
+	
 
 func get_bus_name_by_index() -> void:
 	bus_index = AudioServer.get_bus_index(bus_name)
 
 
 func set_audio_num_label_text() -> void:
-	var percent =str(state) + '%'
+	var percent = str(state) + '%'
 	self.text = str(bus_name) + percent
 	print(state)
 

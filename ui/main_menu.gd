@@ -37,8 +37,7 @@ func change_cursor_color( border_color : Color) -> void:
 
 func _on_start_button_pressed() -> void:
 	sfx.play()
-	get_tree().change_scene_to_file("res://levels/test_scenes/game_test.tscn")
-
+	get_tree().change_scene_to_file("res://levels/scenes/level.tscn")
 
 func _on_exit_button_pressed() -> void:
 	sfx.play()
@@ -74,7 +73,6 @@ func on_settings_changed(button: SettingsButton) -> void:
 	newVolume = button.state
 	if button.bus_name == "SFX" and button.state == button.VolumeState.ON :
 		newVolume = 6
-	print(newVolume)
 	
 	AudioServer.set_bus_volume_db(button.bus_index, newVolume)
 

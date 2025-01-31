@@ -18,8 +18,9 @@ extends Control
 @onready var sfx: AudioStreamPlayer2D = $SFX
 
 
-var life : int = 10
+var life: int = 10
 var score = 0
+var level_up_points = 200
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -36,8 +37,10 @@ func on_hit():
 	life -= 1
 	H_bar.value = life
 	if life == 0:
-		v_Game.show()
+		music_button.hide()
+		sfx_button.hide()
 		game_over.show()
+		v_Game.show()
 		number.show()
 		v_pause.show()
 		play.hide()
@@ -47,10 +50,14 @@ func on_hit():
 		
 		
 func _on_enemy_hit():
+	var player = get_tree().get_first_node_in_group("player")
+
 	score += 10
 	scoring.text = str("Score: ", score)
+	if score >= level_up_points:
+		player.level_up(.02)
+		level_up_points = level_up_points + 150
 	
-
 
 func _on_play_pressed() -> void:
 	sfx.play()
@@ -70,13 +77,11 @@ func _on_pause_toggled(toggled_on: bool) -> void:
 		get_tree().paused = false
 		
 
-
 func _on_exit_pressed() -> void:
 	sfx.play()
 	get_tree().paused = false
 	get_tree().change_scene_to_file("res://ui/main_menu.tscn")
 	
-
 
 func _on_music_button_pressed() -> void:
 	sfx.play()
@@ -99,7 +104,7 @@ func on_settings_changed(button: SettingsButton) -> void:
 			button.state = button.VolumeState.HALF
 	
 	newVolume = button.state
-	if button.bus_name == "SFX" and button.state == button.VolumeState.ON :
+	if button.bus_name == "SFX" and button.state == button.VolumeState.ON:
 		newVolume = 6
 	print(newVolume)
 	
