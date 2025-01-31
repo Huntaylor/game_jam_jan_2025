@@ -4,6 +4,7 @@ extends Node
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var cpu_particles_2d: CPUParticles2D = $Marker2D/CPUParticles2D
 @onready var margin_container: MarginContainer = $MarginContainer
+@onready var boom: AudioStreamPlayer2D = $Boom
 
 @onready var cannon_ball = load("res://player/cannon_ball/cannon_ball.tscn")
 
@@ -25,10 +26,9 @@ func _input(event: InputEvent) -> void:
 			isReloading = true
 			animation_player.play('reloading')
 			shoot(event)
-		else:
-			print('RELOADING!')
 
 func shoot(event:InputEventMouseButton) -> void:
+	boom.play()
 	cpu_particles_2d.emitting = true
 	var newBall = cannon_ball.instantiate()
 	owner.add_child(newBall)
