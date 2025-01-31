@@ -35,6 +35,8 @@ version_control/autoload_on_startup=true
 [global_group]
 
 in_game_HUD=""
+Health=""
+Enemies=""
 
 [input]
 

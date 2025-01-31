@@ -4,7 +4,7 @@
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_0fqno"]
 
-[node name="kill_zone" type="Area2D"]
+[node name="kill_zone" type="Area2D" groups=["Health"]]
 script = ExtResource("1_426sy")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

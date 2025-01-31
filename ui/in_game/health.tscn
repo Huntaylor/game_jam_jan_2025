@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://b82qxsf3822hs"]
+
+[ext_resource type="Script" path="res://ui/health.gd" id="1_46fjl"]
+
+[node name="Health" type="Label" groups=["Health"]]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Life: 10"
+script = ExtResource("1_46fjl")
+
+[connection signal="ready" from="." to="." method="_on_ready"]

@@ -2,9 +2,8 @@ class_name Enemy
 
 extends CharacterBody2D
 
-@onready var projectile = load("res://enemies/scenes/projectile.tscn")
-
-var SPEED = randf_range(50, 250)
+var check = 0
+var SPEED = 50
 var direction = 1
 var x_val = randf_range(-1, 1)
 
@@ -25,11 +24,8 @@ func _physics_process(delta: float) -> void:
 
 func _on_timer_timeout() -> void:
 	var movement = randf_range(0, 100)
-
+	
 	if movement >= 75:
 		velocity.x = x_val * SPEED
 	else:
 		velocity.x = 0
-	
-
-	

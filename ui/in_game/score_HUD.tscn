@@ -6,4 +6,5 @@
 visible = false
 offset_right = 40.0
 offset_bottom = 23.0
+text = "Score: 0"
 script = ExtResource("1_3aquf")

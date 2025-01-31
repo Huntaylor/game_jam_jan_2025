@@ -5,7 +5,7 @@
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_fhc3s"]
 
-[node name="CharacterBody2D" type="CharacterBody2D"]
+[node name="CharacterBody2D" type="CharacterBody2D" groups=["Enemies"]]
 collision_mask = 2
 script = ExtResource("1_qcpas")
 
@@ -13,6 +13,7 @@ script = ExtResource("1_qcpas")
 shape = SubResource("CircleShape2D_fhc3s")
 
 [node name="Timer" type="Timer" parent="."]
+wait_time = 5.0
 autostart = true
 
 [node name="Alien" type="Sprite2D" parent="."]

@@ -37,7 +37,7 @@ func change_cursor_color( border_color : Color) -> void:
 
 func _on_start_button_pressed() -> void:
 	sfx.play()
-	get_tree().change_scene_to_file("res://levels/scenes/level.tscn")
+	get_tree().change_scene_to_file("res://levels/test_scenes/game_test.tscn")
 
 
 func _on_exit_button_pressed() -> void:
